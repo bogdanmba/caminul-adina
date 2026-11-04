@@ -153,7 +153,10 @@ class Media:
                 cached = CACHE / f'{hashlib.md5((rel + str(p.stat().st_mtime)).encode()).hexdigest()}.mp4'
                 if not cached.exists():
                     CACHE.mkdir(exist_ok=True)
-                    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', str(p), '-vf', "scale='min(720,iw)':-2", '-c:v', 'libx264', '-crf', '28', '-preset', 'slow', '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', str(cached)], check=False)
+                    tmp = cached.with_suffix('.tmp.mp4')  # scriem întâi temporar, ca o întrerupere să nu lase un fișier stricat
+                    r = subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', str(p), '-vf', "scale='min(720,iw)':-2", '-c:v', 'libx264', '-crf', '28', '-preset', 'medium', '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', str(tmp)], check=False)
+                    if r.returncode == 0 and tmp.exists():
+                        tmp.replace(cached)
                 if cached.exists() and cached.stat().st_size < p.stat().st_size:
                     src = cached
             shutil.copyfile(src, dst)
