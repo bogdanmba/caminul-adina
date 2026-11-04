@@ -1,0 +1,310 @@
+[
+ {
+  "file": "facebook/pipera/fb-pipera-01.webp",
+  "fbid": "1019808834385622",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-02.webp",
+  "fbid": "1019808811052291",
+  "w": 681,
+  "h": 1024,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-03.webp",
+  "fbid": "1019808787718960",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-04.webp",
+  "fbid": "1019808747718964",
+  "w": 681,
+  "h": 1024,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-05.webp",
+  "fbid": "1019808734385632",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-06.webp",
+  "fbid": "1019808694385636",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-07.webp",
+  "fbid": "1019808677718971",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-08.webp",
+  "fbid": "1019808627718976",
+  "w": 681,
+  "h": 1024,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-09.webp",
+  "fbid": "1019808614385644",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-10.webp",
+  "fbid": "1019808577718981",
+  "w": 681,
+  "h": 1024,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-11.webp",
+  "fbid": "1019808564385649",
+  "w": 1024,
+  "h": 681,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-12.webp",
+  "fbid": "275402272159619",
+  "w": 1600,
+  "h": 1064,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/pipera/fb-pipera-13.webp",
+  "fbid": "275402155492964",
+  "w": 1064,
+  "h": 1600,
+  "loc": "pipera"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-01.webp",
+  "fbid": "978229405210232",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-02.webp",
+  "fbid": "978229371876902",
+  "w": 1600,
+  "h": 900,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-03.webp",
+  "fbid": "978229308543575",
+  "w": 1320,
+  "h": 859,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-04.webp",
+  "fbid": "978229288543577",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-05.webp",
+  "fbid": "914273138272526",
+  "w": 1320,
+  "h": 852,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-06.webp",
+  "fbid": "914273028272537",
+  "w": 1600,
+  "h": 900,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-07.webp",
+  "fbid": "914273014939205",
+  "w": 1320,
+  "h": 859,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-08.webp",
+  "fbid": "896447760055064",
+  "w": 1200,
+  "h": 1600,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-09.webp",
+  "fbid": "896447746721732",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-10.webp",
+  "fbid": "896447696721737",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-11.webp",
+  "fbid": "896447686721738",
+  "w": 1200,
+  "h": 1600,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-12.webp",
+  "fbid": "896447566721750",
+  "w": 1200,
+  "h": 1600,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-13.webp",
+  "fbid": "896447516721755",
+  "w": 1200,
+  "h": 1600,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-14.webp",
+  "fbid": "896447473388426",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-15.webp",
+  "fbid": "896447466721760",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-16.webp",
+  "fbid": "896447393388434",
+  "w": 1600,
+  "h": 1200,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-17.webp",
+  "fbid": "896447380055102",
+  "w": 1200,
+  "h": 1600,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/snagov/fb-snagov-18.webp",
+  "fbid": "873178582381982",
+  "w": 1320,
+  "h": 852,
+  "loc": "snagov"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-01.webp",
+  "fbid": "966248613074978",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-02.webp",
+  "fbid": "966248599741646",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-03.webp",
+  "fbid": "966248553074984",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-04.webp",
+  "fbid": "966248533074986",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-05.webp",
+  "fbid": "966248499741656",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-06.webp",
+  "fbid": "966248476408325",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-07.webp",
+  "fbid": "966248446408328",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-08.webp",
+  "fbid": "966248426408330",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/ploiesti/fb-ploiesti-09.webp",
+  "fbid": "948945018138671",
+  "w": 1200,
+  "h": 1600,
+  "loc": "ploiesti"
+ },
+ {
+  "file": "facebook/poiana-brasov/fb-poiana-brasov-01.webp",
+  "fbid": "1083650971334741",
+  "w": 1024,
+  "h": 768,
+  "loc": "poiana-brasov"
+ },
+ {
+  "file": "facebook/poiana-brasov/fb-poiana-brasov-02.webp",
+  "fbid": "1079884191711419",
+  "w": 1536,
+  "h": 1024,
+  "loc": "poiana-brasov"
+ },
+ {
+  "file": "facebook/general/fb-general-01.webp",
+  "fbid": "1083650964668075",
+  "w": 960,
+  "h": 640,
+  "loc": "general"
+ },
+ {
+  "file": "facebook/general/fb-general-02-logo-5-locatii.webp",
+  "fbid": "1083675511332287",
+  "w": 1215,
+  "h": 1215,
+  "loc": "general"
+ }
+]

@@ -1,0 +1,560 @@
+[
+ {
+  "file": "site/header/header-cuplu-seniori.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2020/07/O6I4K60-scaled.jpg",
+  "w": 2200,
+  "h": 1467
+ },
+ {
+  "file": "site/header/header-cuplu-seniori-og.jpg",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2020/07/O6I4K60-scaled.jpg",
+  "w": 1200,
+  "h": 800
+ },
+ {
+  "file": "site/logo/logo-caminul-adina-512.png",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/logoCaminulAdina.png",
+  "w": 512,
+  "h": 512
+ },
+ {
+  "file": "site/logo/logo-caminul-adina-192.png",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/logoCaminulAdina.png",
+  "w": 192,
+  "h": 192
+ },
+ {
+  "file": "site/logo/logo-caminul-adina-512.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/logoCaminulAdina.png",
+  "w": 512,
+  "h": 512
+ },
+ {
+  "file": "site/pipera/pipera-01.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0055_Camin-Pipera-scaled.jpg",
+  "w": 1065,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-02.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0030_Camin-Pipera-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-03.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0133_Camin-Pipera-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-04.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0130_Camin-Pipera-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-05.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0047_Camin-Pipera-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-06.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0046_Camin-Pipera-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-07.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0011_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-08.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0108_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-09.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0129_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-10.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0127_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-11.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0125_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-12.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0115_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-13.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0113_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-14.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0110_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-15.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0108_Camin-Pipera-1-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-16.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0106_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-17.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0103_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-18.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0096_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-19.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0092_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-20.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0090_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-21.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0087_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-22.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0078_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-23.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0068_Camin-Pipera-1-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-24.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0059_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-25.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0057_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-26.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0037_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-27.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0034_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-28.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0032_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-29.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0030_Camin-Pipera-1-scaled.jpg",
+  "w": 1064,
+  "h": 1600
+ },
+ {
+  "file": "site/pipera/pipera-30.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0027_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-31.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0024_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-32.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0023_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-33.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0016_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-34.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0015_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-35.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0014_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/pipera/pipera-36.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2023/11/0013_Camin-Pipera-scaled.jpg",
+  "w": 1600,
+  "h": 1064
+ },
+ {
+  "file": "site/otopeni/otopeni-01.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00007-scaled.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/otopeni/otopeni-02.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00020-scaled.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/otopeni/otopeni-03.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-20.41.06.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/otopeni/otopeni-04.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-20.41.04.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/otopeni/otopeni-05.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-20.41.03.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/otopeni/otopeni-06.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00014-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-07.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00013-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-08.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00011-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-09.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00010-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-10.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-20.41.04-1.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-11.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00009-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-12.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00008-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-13.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00006-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-14.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00005-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-15.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00004-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-16.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00001-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-17.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00032-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-18.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00031-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-19.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00029-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-20.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00028-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-21.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00027-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-22.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00026-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-23.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00025-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-24.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00024-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-25.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00023-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-26.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00022-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-27.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00021-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-28.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00019-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-29.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00018-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-30.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00017-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-31.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00016-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-32.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00015-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/otopeni-33.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/09/image00012-scaled.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/otopeni/video/video-otopeni-2022-10-11-at-20.41.06.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2022/10/WhatsApp-Video-2022-10-11-at-20.41.06.mp4"
+ },
+ {
+  "file": "site/snagov/snagov-01.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-6.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/snagov/snagov-02.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-5.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/snagov/snagov-03.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-11-at-19.39.40.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/snagov/snagov-04.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.37.jpeg",
+  "w": 1320,
+  "h": 852
+ },
+ {
+  "file": "site/snagov/snagov-05.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-7.jpeg",
+  "w": 1320,
+  "h": 859
+ },
+ {
+  "file": "site/snagov/snagov-06.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/snagov/snagov-07.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.30.34.jpeg",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "file": "site/snagov/snagov-08.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-4.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/snagov/snagov-09.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-3.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/snagov/snagov-10.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-2.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/snagov/snagov-11.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.20.38-1.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/snagov/snagov-12.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-11.21.04.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/snagov/video/video-snagov-2026-05-12-at-08.03.34.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-12-at-08.03.34.mp4"
+ },
+ {
+  "file": "site/snagov/video/video-snagov-2026-05-12-at-08.03.34-1.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-12-at-08.03.34-1.mp4"
+ },
+ {
+  "file": "site/snagov/video/video-snagov-2026-05-12-at-08.03.34-2.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-12-at-08.03.34-2.mp4"
+ },
+ {
+  "file": "site/ploiesti/ploiesti-01.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-11-at-19.38.26.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/ploiesti/ploiesti-02.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-11-at-19.38.04.jpeg",
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "file": "site/ploiesti/ploiesti-03.webp",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-11-at-19.38.26-1.jpeg",
+  "w": 1200,
+  "h": 1600
+ },
+ {
+  "file": "site/ploiesti/video/video-ploiesti-2026-05-11-at-19.38.29.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-11-at-19.38.29.mp4"
+ },
+ {
+  "file": "site/ploiesti/video/video-ploiesti-2026-05-11-at-19.38.32.mp4",
+  "src": "https://caminul-adina.ro/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-11-at-19.38.32.mp4"
+ }
+]

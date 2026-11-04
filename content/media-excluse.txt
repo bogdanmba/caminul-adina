@@ -1,0 +1,50 @@
+# Poze care nu apar pe site (calea relativă la media/). Câte una pe linie.
+# Pipera: pozele de pe Facebook sunt dubluri ale setului profesional de pe site-ul vechi
+facebook/pipera/fb-pipera-01.webp
+facebook/pipera/fb-pipera-02.webp
+facebook/pipera/fb-pipera-03.webp
+facebook/pipera/fb-pipera-04.webp
+facebook/pipera/fb-pipera-05.webp
+facebook/pipera/fb-pipera-06.webp
+facebook/pipera/fb-pipera-07.webp
+facebook/pipera/fb-pipera-08.webp
+facebook/pipera/fb-pipera-09.webp
+facebook/pipera/fb-pipera-10.webp
+facebook/pipera/fb-pipera-11.webp
+facebook/pipera/fb-pipera-12.webp
+facebook/pipera/fb-pipera-13.webp
+# Pipera: gardul cu bannere vechi
+site/pipera/pipera-09.webp
+site/pipera/pipera-10.webp
+# Otopeni: dubluri și prea multe băi asemănătoare
+site/otopeni/otopeni-02.webp
+site/otopeni/otopeni-04.webp
+site/otopeni/otopeni-05.webp
+site/otopeni/otopeni-11.webp
+site/otopeni/otopeni-13.webp
+site/otopeni/otopeni-17.webp
+site/otopeni/otopeni-18.webp
+site/otopeni/otopeni-19.webp
+site/otopeni/otopeni-21.webp
+site/otopeni/otopeni-22.webp
+site/otopeni/otopeni-23.webp
+site/otopeni/otopeni-25.webp
+site/otopeni/otopeni-30.webp
+# Snagov: pozele de pe site-ul vechi sunt dubluri ale celor de pe Facebook (12 pare a fi din Ploiești)
+site/snagov/snagov-01.webp
+site/snagov/snagov-02.webp
+site/snagov/snagov-03.webp
+site/snagov/snagov-04.webp
+site/snagov/snagov-05.webp
+site/snagov/snagov-06.webp
+site/snagov/snagov-07.webp
+site/snagov/snagov-08.webp
+site/snagov/snagov-09.webp
+site/snagov/snagov-10.webp
+site/snagov/snagov-11.webp
+site/snagov/snagov-12.webp
+facebook/snagov/fb-snagov-06.webp
+# Ploiești: dublură
+site/ploiesti/ploiesti-01.webp
+# Poiana Brașov: unghi înclinat
+facebook/poiana-brasov/fb-poiana-brasov-01.webp

@@ -1,0 +1,280 @@
+[
+  {
+    "slug": "camin-batrani-pipera",
+    "key": "pipera",
+    "name": "Pipera",
+    "fullName": "Căminul Adina Pipera",
+    "area": "București Nord · Voluntari",
+    "locality": "Voluntari",
+    "region": "Ilfov",
+    "address": "Bulevardul Pipera nr. 55A",
+    "mapsQuery": "Bulevardul Pipera 55A, Voluntari, Ilfov",
+    "postal": "",
+    "priceFrom": 6500,
+    "status": "open",
+    "color": "#1F6152",
+    "seoTitle": "Cămin de bătrâni Pipera – Căminul Adina, Bd. Pipera 55A",
+    "seoDescription": "Cămin de bătrâni în Pipera (Voluntari): vilă cu curte de 1.500 mp, camere duble, asistență medicală non-stop și 5 mese pe zi. De la 6.500 lei/lună. Programați o vizită.",
+    "tagline": "O vilă liniștită lângă oraș, cu foișor și curte mare.",
+    "intro": [
+      "Căminul Adina din Pipera e o vilă de 500 mp, pe Bulevardul Pipera nr. 55A, într-o zonă ușor de ajuns pentru familiile din București.",
+      "Curtea de 1.500 mp are spații verzi, alei și un foișor în care rezidenții stau la soare sau la povești. Camerele sunt duble, luminoase, cu mobilier nou și o bucătărie complet utilată pentru mesele zilei."
+    ],
+    "facts": [
+      [
+        "Camere",
+        "10 camere duble"
+      ],
+      [
+        "Clădire",
+        "vilă de 500 mp"
+      ],
+      [
+        "Curte",
+        "1.500 mp, cu foișor"
+      ],
+      [
+        "Băi",
+        "9 băi"
+      ],
+      [
+        "Spații comune",
+        "living, birou, cabinet medical"
+      ]
+    ],
+    "highlights": [
+      "Aproape de București",
+      "Foișor și curte de 1.500 mp",
+      "Cabinet medical propriu",
+      "Camere duble spațioase"
+    ],
+    "reels": [],
+    "nearby": "Acces ușor din nordul Bucureștiului.",
+    "cover": "site/pipera/pipera-12.webp"
+  },
+  {
+    "slug": "camin-batrani-otopeni",
+    "key": "otopeni",
+    "name": "Otopeni",
+    "fullName": "Căminul Adina Otopeni",
+    "area": "Otopeni · Ilfov",
+    "locality": "Otopeni",
+    "region": "Ilfov",
+    "address": "Strada Ion Luca Caragiale nr. 7",
+    "mapsQuery": "Strada Ion Luca Caragiale 7, Otopeni, Ilfov",
+    "postal": "",
+    "priceFrom": 6500,
+    "status": "open",
+    "color": "#A6402F",
+    "seoTitle": "Cămin de bătrâni Otopeni – Căminul Adina, Str. I. L. Caragiale 7",
+    "seoDescription": "Cămin de bătrâni în Otopeni, cu livadă și curte de 1.500 mp. Camere de 2–3 persoane, asistență medicală 24 din 24, consultații la cămin. De la 6.500 lei/lună.",
+    "tagline": "O casă cu livadă și aer curat, aproape de aeroport.",
+    "intro": [
+      "Căminul Adina din Otopeni se află pe strada Ion Luca Caragiale nr. 7, într-o zonă liniștită, ușor accesibilă din București.",
+      "Vila are 600 mp și o curte de 1.500 mp cu spații verzi și o livadă. E potrivită pentru cei care se simt bine afară, printre pomi, și vor să iasă zilnic la plimbare."
+    ],
+    "facts": [
+      [
+        "Camere",
+        "12 camere de 2–3 persoane"
+      ],
+      [
+        "Clădire",
+        "vilă de 600 mp"
+      ],
+      [
+        "Curte",
+        "1.500 mp, cu livadă"
+      ],
+      [
+        "Băi",
+        "8 băi"
+      ],
+      [
+        "Spații comune",
+        "living, cabinet medical"
+      ]
+    ],
+    "highlights": [
+      "Livadă și grădină",
+      "Zonă liniștită",
+      "Cabinet medical propriu",
+      "Aproape de aeroport"
+    ],
+    "reels": [
+      "https://www.facebook.com/reel/735589744713630/"
+    ],
+    "nearby": "Lângă Aeroportul Henri Coandă, la câteva minute de București.",
+    "cover": "site/otopeni/otopeni-09.webp"
+  },
+  {
+    "slug": "camin-batrani-snagov",
+    "key": "snagov",
+    "name": "Snagov",
+    "fullName": "Căminul Adina Snagov",
+    "area": "Ciofliceni · malul lacului Snagov",
+    "locality": "Ciofliceni, Snagov",
+    "region": "Ilfov",
+    "address": "Strada Ștefan cel Mare nr. 74",
+    "mapsQuery": "Strada Ștefan cel Mare 74, Ciofliceni, Snagov, Ilfov",
+    "postal": "",
+    "priceFrom": 7000,
+    "status": "open",
+    "color": "#2A6687",
+    "seoTitle": "Cămin de bătrâni Snagov – Căminul Adina, lângă lac",
+    "seoDescription": "Cămin de bătrâni la Snagov, pe 6.000 mp cu ieșire la lac și debarcader. 15 camere cu baie proprie și terasă, îngrijire medicală non-stop. De la 7.000 lei/lună.",
+    "tagline": "Pe malul lacului, pe 6.000 mp de grădină.",
+    "intro": [
+      "Căminul Adina din Snagov e o locație nouă, în Ciofliceni, pe strada Ștefan cel Mare nr. 74. Proprietatea are 6.000 mp și ieșire directă la lac, cu debarcader.",
+      "Toate camerele au baie proprie și terasă. Curtea are pomi fructiferi și un foișor, iar livingurile mari, cu ferestre spre grădină, sunt locul în care rezidenții își petrec după-amiezele."
+    ],
+    "facts": [
+      [
+        "Camere",
+        "15 camere duble, fiecare cu baie proprie"
+      ],
+      [
+        "Terase",
+        "terasă la fiecare cameră"
+      ],
+      [
+        "Teren",
+        "6.000 mp, cu ieșire la lac"
+      ],
+      [
+        "Exterior",
+        "debarcader, foișor, pomi fructiferi"
+      ],
+      [
+        "Spații comune",
+        "living-uri mari, sală de mese"
+      ]
+    ],
+    "highlights": [
+      "Ieșire directă la lac",
+      "Baie și terasă la fiecare cameră",
+      "6.000 mp de grădină",
+      "Locație nouă"
+    ],
+    "reels": [
+      "https://www.facebook.com/reel/1760995055016956/",
+      "https://www.facebook.com/reel/1808815030527107/",
+      "https://www.facebook.com/reel/1035040272406920/",
+      "https://www.facebook.com/reel/1353052226956555/",
+      "https://www.facebook.com/reel/1889219215075449/"
+    ],
+    "nearby": "La aproximativ 40 de km nord de București, lângă Lacul Snagov.",
+    "cover": "facebook/snagov/fb-snagov-02.webp"
+  },
+  {
+    "slug": "camin-batrani-ploiesti",
+    "key": "ploiesti",
+    "name": "Ploiești",
+    "fullName": "Căminul Adina Ploiești",
+    "area": "Ploiești · Prahova",
+    "locality": "Ploiești",
+    "region": "Prahova",
+    "address": "Strada Crăițelor nr. 6",
+    "mapsQuery": "Strada Crăițelor 6, Ploiești, Prahova",
+    "postal": "",
+    "priceFrom": 5500,
+    "status": "open",
+    "color": "#865719",
+    "seoTitle": "Cămin de bătrâni Ploiești – Căminul Adina, lângă AFI Mall",
+    "seoDescription": "Cămin de bătrâni în Ploiești, Str. Crăițelor 6, lângă AFI Mall. Camere single și duble cu baie și terasă proprie, îngrijire non-stop. De la 5.500 lei/lună.",
+    "tagline": "Clădire nouă, camere single și duble, aproape de centru.",
+    "intro": [
+      "Căminul Adina din Ploiești e o clădire nouă, pe strada Crăițelor nr. 6, lângă AFI Mall. Are finisaje moderne și un living mare, gândit pentru zilele petrecute împreună.",
+      "Cele 15 camere sunt single sau duble și fiecare are baie și terasă proprie. E locația cu cel mai accesibil preț de pornire."
+    ],
+    "facts": [
+      [
+        "Camere",
+        "15 camere, single și duble"
+      ],
+      [
+        "Dotări cameră",
+        "baie și terasă proprie"
+      ],
+      [
+        "Clădire",
+        "nouă, finisaje moderne"
+      ],
+      [
+        "Spații comune",
+        "living spațios, sală de mese"
+      ],
+      [
+        "Repere",
+        "lângă AFI Mall Ploiești"
+      ]
+    ],
+    "highlights": [
+      "Camere single disponibile",
+      "Baie și terasă la fiecare cameră",
+      "Clădire nouă",
+      "Cel mai accesibil preț"
+    ],
+    "reels": [
+      "https://www.facebook.com/reel/2852564721797318/",
+      "https://www.facebook.com/reel/1405089084755839/"
+    ],
+    "nearby": "Lângă AFI Mall Ploiești.",
+    "cover": "site/ploiesti/ploiesti-02.webp"
+  },
+  {
+    "slug": "camin-batrani-poiana-brasov",
+    "key": "poiana-brasov",
+    "name": "Poiana Brașov",
+    "fullName": "Căminul Adina Poiana Brașov",
+    "area": "Poiana Brașov · Brașov",
+    "locality": "Poiana Brașov",
+    "region": "Brașov",
+    "address": "Poiana Brașov",
+    "mapsQuery": "Poiana Brașov, Brașov",
+    "postal": "",
+    "priceFrom": null,
+    "status": "soon",
+    "openingDate": "2027-01-15",
+    "openingLabel": "15 ianuarie 2027",
+    "color": "#5A4775",
+    "seoTitle": "Cămin de bătrâni Poiana Brașov – Căminul Adina, deschidere 15 ianuarie 2027",
+    "seoDescription": "Căminul Adina se deschide în Poiana Brașov pe 15 ianuarie 2027: 36 de camere și 5 apartamente cu baie proprie, lift, saună, kinetoterapie, grădină de 6.000 mp. Rezervări: 0756 604 755.",
+    "tagline": "Un hotel adaptat pentru îngrijire, la munte. Rezervările au început.",
+    "intro": [
+      "Căminul Adina se extinde în Poiana Brașov, într-un hotel adaptat pentru îngrijire și confort. Deschiderea oficială e pe 15 ianuarie 2027, iar rezervările au început.",
+      "Clădirea are 36 de camere și 5 apartamente, single și duble, fiecare cu baie proprie, și lift pentru acces ușor. Grădina de 6.000 mp are alei de plimbare și un foișor mare, în mijlocul naturii și al aerului curat de munte."
+    ],
+    "facts": [
+      [
+        "Deschidere",
+        "15 ianuarie 2027"
+      ],
+      [
+        "Camere",
+        "36 de camere și 5 apartamente, single și duble"
+      ],
+      [
+        "Dotări cameră",
+        "baie proprie, acces cu lift"
+      ],
+      [
+        "Spații comune",
+        "sală de mese tip restaurant, sală de kinetoterapie, saună"
+      ],
+      [
+        "Grădină",
+        "6.000 mp, alei și foișor mare"
+      ]
+    ],
+    "highlights": [
+      "Deschidere 15 ianuarie 2027",
+      "Bucătar și bucătărie proprie",
+      "Kinetoterapie și saună",
+      "Aer de munte"
+    ],
+    "reels": [],
+    "nearby": "În stațiunea Poiana Brașov. Adresa exactă o primiți la telefon.",
+    "cover": "facebook/poiana-brasov/fb-poiana-brasov-02.webp"
+  }
+]
