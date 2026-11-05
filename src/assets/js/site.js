@@ -82,7 +82,7 @@
     items.forEach(function (b, i) {
       b.addEventListener('click', function () {
         if (!lb) buildLb();
-        list = items.filter(function (x) { return x.offsetParent !== null; }); lastFocus = b;
+        list = items; lastFocus = b; // toate pozele galeriei, inclusiv cele ascunse sub „Vezi toate”
         show(list.indexOf(b)); lb.classList.add('open'); document.body.style.overflow = 'hidden'; $('.x', lb).focus();
       });
     });
