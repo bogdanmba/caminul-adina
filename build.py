@@ -91,7 +91,8 @@ class Media:
             w0, h0 = im.size
             for w in widths:
                 if w > w0 and w != widths[0] and variants:
-                    continue
+                    if w0 in variants or max(variants) >= w0:
+                        continue  # o singură variantă la mărimea originală, pentru pozele mai mici
                 tw = min(w, w0)
                 th = round(h0 * tw / w0)
                 dst = self.out / f'{base}-{tw}.webp'
