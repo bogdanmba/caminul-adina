@@ -260,8 +260,8 @@ class Site:
 <link rel="icon" href="{r}assets/media/site/logo/logo-caminul-adina-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="{r}apple-touch-icon.png">
 <link rel="manifest" href="{r}site.webmanifest">
-<link rel="preload" href="{r}assets/fonts/bricolage-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{r}assets/fonts/atkinson-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{r}assets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{r}assets/fonts/figtree-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 {preload or ''}
 <link rel="stylesheet" href="{r}assets/css/site.css?v={self.css_v}">
 <script type="application/ld+json">{json.dumps(ld if len(ld) > 1 else ld[0], ensure_ascii=False)}</script>
@@ -269,7 +269,7 @@ class Site:
 <body>
 <a class="skip" href="#main">Sari la conținut</a>
 '''
-        band = '<div class="preview-band">Versiune de previzualizare a noului site Căminul Adina. Nu este încă publicată pe caminul-adina.ro.</div>\n' if preview else ''
+        band = ''
         html_ = head + band + self.header(depth, nav) + f'<main id="main">\n{body}\n</main>\n' + (self.cta_band(depth) if cta else '') + self.footer(depth) + self.tail(depth)
         write(self.out, path + 'index.html' if path.endswith('/') or path == '' else path, html_)
         self.pages.append((path, robots))
@@ -296,6 +296,12 @@ class Site:
 </div>
 </header>
 '''
+
+    SOCIAL_MAIN = [('facebook', 'Facebook', 'facebook'), ('instagram', 'Instagram', 'instagram'), ('tiktok', 'TikTok', 'tiktok'), ('youtube', 'YouTube', 'youtube')]
+
+    def social_buttons(self):
+        so = self.s['social']
+        return '<div class="social-btns">' + ''.join(f'<a class="btn btn-line" href="{E(so[k])}" target="_blank" rel="noopener">{icon(ic)}{lab}</a>' for k, lab, ic in self.SOCIAL_MAIN if so.get(k)) + '</div>'
 
     def cta_band(self, depth):
         r = self.R(depth)
@@ -530,7 +536,7 @@ class Site:
     def home(self):
         s, d = self.s, 0
         news_l = next((l for l in self.locs if l['status'] == 'soon'), None)
-        news = f'<a class="news" href="{self.loc_url(news_l)}"><b>Nou</b>Poiana Brașov: deschidere pe {E(news_l["openingLabel"])}</a>' if news_l else ''
+        news = ''
         general_reels = ['https://www.facebook.com/reel/1082612637977344/', 'https://www.facebook.com/reel/1627799399054419/', 'https://www.facebook.com/reel/1796014958438906/', 'https://www.facebook.com/reel/1240042123313651/']
         reel_labels = ['O zi la Căminul Adina', 'Mesele de zi cu zi', 'Activități recreative', 'Timp pentru mișcare']
         posters = [self.media.image(r, '', 'general') for r in ('site/otopeni/otopeni-08.webp', 'site/pipera/pipera-22.webp', 'site/pipera/pipera-19.webp', 'site/pipera/pipera-16.webp')]
@@ -581,7 +587,8 @@ class Site:
 <div class="wrap">
 <div class="sec-head"><h2 id="t-vid">Din viața de la cămin</h2><p class="lead">Câteva clipuri de pe pagina noastră de Facebook, cu mesele, activitățile și zilele obișnuite ale rezidenților.</p></div>
 <div class="videos">{reels}</div>
-<p style="margin-top:24px"><a class="btn btn-line" href="{E(s["social"]["facebook"])}" target="_blank" rel="noopener">{icon("facebook")}Urmăriți-ne pe Facebook</a></p>
+<p class="social-lead">Urmăriți-ne pentru clipuri noi din fiecare cămin:</p>
+{self.social_buttons()}
 </div>
 </section>
 
@@ -773,6 +780,8 @@ class Site:
 <li><a href="{E(s["social"]["messenger"])}" target="_blank" rel="noopener">{icon("messenger")}<span>Messenger<small>Pagina Căminul de bătrâni ADINA</small></span></a></li>
 <li><a href="mailto:{E(s["email"])}">{icon("mail")}<span>{E(s["email"])}<small>E-mail</small></span></a></li>
 </ul>
+<h3 style="margin:36px 0 12px">Urmăriți-ne</h3>
+{self.social_buttons()}
 <h3 style="margin:36px 0 4px">Adresele căminelor</h3>
 <ul class="reach-list">{addrs}</ul>
 </div>

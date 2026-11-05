@@ -1,11 +1,9 @@
 /* Căminul Adina — stiluri site
-   Fonturi găzduite local (fără cereri către Google): Bricolage Grotesque + Atkinson Hyperlegible Next */
-@font-face{font-family:"Bricolage";font-style:normal;font-weight:200 800;font-display:swap;src:url("../fonts/bricolage-latin-wght.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Bricolage";font-style:normal;font-weight:200 800;font-display:swap;src:url("../fonts/bricolage-latin-ext-wght.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"Atkinson";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/atkinson-latin-400.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Atkinson";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/atkinson-latin-ext-400.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"Atkinson";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/atkinson-latin-700.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Atkinson";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/atkinson-latin-ext-700.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+   Fonturi găzduite local (fără cereri către Google): Fraunces (titluri) + Figtree (text) */
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("../fonts/fraunces-latin-wght.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("../fonts/fraunces-latin-ext-wght.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:swap;src:url("../fonts/figtree-latin-wght.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:swap;src:url("../fonts/figtree-latin-ext-wght.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
 
 :root{
   --ink:#14263A; --ink-2:#33475C; --muted:#56687A;
@@ -13,8 +11,8 @@
   --gold:#E7AE3C; --gold-ink:#5A3C00; --red:#B8332A; --blue:#2C62A3;
   --ok:#2E6B3A; --err:#A3241C;
   --c:#14263A;
-  --head:"Bricolage", "Segoe UI", system-ui, sans-serif;
-  --body:"Atkinson", "Segoe UI", system-ui, sans-serif;
+  --head:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
   --r:18px; --arch:999px 999px 22px 22px;
   --wrap:1200px;
 }
@@ -31,7 +29,7 @@ a:hover{text-decoration-thickness:2px}
 .skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;z-index:100;text-decoration:none}
 .skip:focus{top:12px}
 
-h1,h2,h3,h4{font-family:var(--head);color:var(--ink);margin:0;line-height:1.08;font-weight:700;letter-spacing:-.015em;font-variation-settings:"wdth" 92}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink);margin:0;line-height:1.08;font-weight:600;letter-spacing:-.01em}
 h1{font-size:clamp(40px,5.6vw,72px);font-weight:750}
 h2{font-size:clamp(30px,3.6vw,46px)}
 h3{font-size:24px;line-height:1.2}
@@ -342,3 +340,7 @@ form.cf{background:#fff;border:1px solid var(--line);border-radius:24px;padding:
   .consent .btn-row [data-consent=settings]{flex-basis:100%}
 }
 @media print{.site-head,.callbar,.consent,.site-foot .social{display:none}}
+
+.social-lead{margin:28px 0 12px;color:var(--ink-2)}
+.social-btns{display:flex;flex-wrap:wrap;gap:10px}
+.social-btns .btn{min-height:48px}
