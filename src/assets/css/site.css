@@ -16,6 +16,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip;max-width:100%}
+@supports not (overflow-x:clip){body{overflow-x:hidden}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 18.5px/1.6 var(--body);text-rendering:optimizeLegibility}
 img,video{max-width:100%;height:auto;display:block}
@@ -272,9 +274,11 @@ form.cf{background:#fff;border:1px solid var(--line);border-radius:24px;padding:
 .foot-bottom{border-top:1px solid #23384D;margin-top:44px;padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 
 /* bara apel mobil */
-.callbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:10px;transform:translateY(150%);visibility:hidden;transition:transform .25s,visibility .25s}
+.callbar{display:none;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:45;gap:10px;transform:translateY(150%);visibility:hidden;transition:transform .25s,visibility .25s}
 .callbar.show{transform:none;visibility:visible}
-.callbar a{flex:1;box-shadow:0 10px 26px rgba(10,20,30,.28)}
+.callbar a{flex:1;box-shadow:0 8px 20px rgba(10,20,30,.25)}
+.callbar .btn{min-height:44px;padding:8px 14px;font-size:16px;gap:8px}
+.callbar .btn svg{width:18px;height:18px}
 
 /* consimtamant cookie */
 .consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 60px rgba(10,20,30,.25);padding:24px 26px}
@@ -318,6 +322,7 @@ form.cf{background:#fff;border:1px solid var(--line);border-radius:24px;padding:
   .incl div,.incl div:nth-child(3n+2),.incl div:nth-child(3n){padding:22px 0;border-left:0}
   section{padding:64px 0}
   .callbar{display:flex}
+  .site-foot{padding-bottom:76px}
   .cf .grid{grid-template-columns:1fr}
   form.cf{padding:24px 18px}
 }

@@ -84,7 +84,7 @@ class Media:
             return self.placeholder(key, alt)
         base = 'assets/media/' + re.sub(r'\.[a-z0-9]+$', '', rel, flags=re.I)
         ext = src.suffix.lower()
-        widths = [480, 720, 960, 1600]
+        widths = [480, 720, 960, 1600, 2200]
         variants = {}
         if Image and ext in ('.webp', '.jpg', '.jpeg', '.png'):
             im = Image.open(src)
@@ -226,6 +226,15 @@ class Media:
 
 
 # ------------------------------------------------------------------ randare
+def hero_sizes(m):
+    """Poza din antet e decupată (object-fit: cover) la 4:4,3 pe desktop și 4:3,3 pe mobil,
+    deci pe ecran e mai lată decât caseta. Calculăm lățimea reală, ca browserul să aleagă varianta clară."""
+    ar = m['w'] / m['h'] if m.get('h') else 1
+    desk = max(520, round(520 * 4.3 / 4 * ar))
+    mob = max(92, round(92 * 3.3 / 4 * ar))
+    return f'(max-width:960px) {mob}vw, {desk}px'
+
+
 def maps_link(l):
     """Link spre fișa Google Maps a căminului (place_id), cu căutare ca rezervă."""
     u = 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(l['mapsQuery'])
@@ -625,7 +634,7 @@ class Site:
 <div class="btn-row" data-hero-cta><a class="btn btn-ink" href="contact/#programare">Programează o vizită</a><a class="btn btn-line" href="tel:{s["phoneE164"]}">{icon("phone")}Sună: {E(s["phone"])}</a></div>
 <ul class="trust"><li>{icon("check")}Asistente și infirmiere 24 din 24</li><li>{icon("check")}Medici specialiști la cămin</li><li>{icon("check")}Prețuri de la 5.500 lei/lună</li><li>{icon("check")}Peste {s["experienceYears"]} ani de experiență</li></ul>
 </div>
-<div class="hero-photo">{self.img(d, self.hero, "(max-width:960px) 92vw, 520px", eager=True)}
+<div class="hero-photo">{self.img(d, self.hero, hero_sizes(self.hero), eager=True)}
 <div class="hero-note"><b>Îngrijire 24 din 24</b>Asistente și infirmiere în fiecare tură, la toate locațiile.</div></div>
 </div>
 </section>
@@ -682,7 +691,7 @@ class Site:
 </section>'''
         ld = [{'@context': 'https://schema.org', '@type': 'WebSite', '@id': self.abs('#site'), 'url': self.abs(), 'name': s['name'], 'inLanguage': 'ro-RO', 'publisher': {'@id': self.abs('#organizatie')}},
               {'@context': 'https://schema.org', '@type': 'ItemList', 'name': 'Locațiile Căminul Adina', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'url': self.abs(self.loc_url(l)), 'name': l['fullName']} for i, l in enumerate(self.locs)]}]
-        pre = f'<link rel="preload" as="image" href="{self.hero["src"]}" imagesrcset="{self.hero["srcset"]}" imagesizes="(max-width:960px) 92vw, 520px">' if self.hero['srcset'] else ''
+        pre = f'<link rel="preload" as="image" href="{self.hero["src"]}" imagesrcset="{self.hero["srcset"]}" imagesizes="{hero_sizes(self.hero)}">' if self.hero['srcset'] else ''
         self.page('', 'Cămin de bătrâni Pipera, Otopeni, Snagov, Ploiești, Poiana Brașov – Căminul Adina',
                   'Căminul Adina: cămine de bătrâni în Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov. Asistență medicală non-stop, 5 mese pe zi, medici la cămin. De la 5.500 lei/lună.',
                   body, jsonld=ld, nav='', preload=pre)
@@ -717,7 +726,7 @@ class Site:
 {price}
 <div class="btn-row" data-hero-cta><a class="btn btn-c" href="../contact/?locatia={quote(name)}#programare">{cta1}</a><a class="btn btn-line" href="tel:{s["phoneE164"]}">{icon("phone")}{E(s["phone"])}</a><a class="btn btn-line" href="https://wa.me/{s["whatsapp"]}?text={quote("Bună ziua, aș dori informații despre Căminul Adina " + name + ".")}" target="_blank" rel="noopener">{icon("whatsapp")}WhatsApp</a></div>
 </div>
-<div class="hero-photo">{self.img(d, cover, "(max-width:960px) 92vw, 520px", eager=True)}</div>
+<div class="hero-photo">{self.img(d, cover, hero_sizes(cover), eager=True)}</div>
 </div>
 </section>
 
@@ -759,7 +768,7 @@ class Site:
                 if v['dur']: vo['duration'] = f'PT{v["dur"] // 60}M{v["dur"] % 60}S'
                 ld.append(vo)
         og = self.abs(cover['src']) if not cover['src'].endswith('.svg') else None
-        pre = f'<link rel="preload" as="image" href="../{cover["src"]}" imagesrcset="{", ".join("../" + p.strip() for p in cover["srcset"].split(","))}" imagesizes="(max-width:960px) 92vw, 520px" fetchpriority="high">' if cover.get('srcset') else ''
+        pre = f'<link rel="preload" as="image" href="../{cover["src"]}" imagesrcset="{", ".join("../" + p.strip() for p in cover["srcset"].split(","))}" imagesizes="{hero_sizes(cover)}" fetchpriority="high">' if cover.get('srcset') else ''
         self.page(self.loc_url(l), l['seoTitle'], l['seoDescription'], body, jsonld=ld, og_img=og, nav='locatii', preload=pre)
 
     def simple(self, path, h1, lead, inner, title, desc, crumb, jsonld=None, cta=True, preload=None):
