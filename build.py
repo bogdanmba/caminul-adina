@@ -44,6 +44,7 @@ ICONS = {
  'messenger': '<path fill="currentColor" d="M12 2C6.4 2 2 6.1 2 11.4c0 3 1.5 5.6 3.8 7.3V22l3.4-1.9c.9.3 1.8.4 2.8.4 5.6 0 10-4.1 10-9.4S17.6 2 12 2Zm1 12.6-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.4 5.7Z"/>',
  'mail': '<path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.2 7v10h15.6V7L12 12.2ZM5.4 7 12 11.4 18.6 7H5.4Z"/>',
  'pin': '<path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/>',
+ 'nav': '<path fill="currentColor" d="M21.7 2.3a1 1 0 0 0-1.1-.2l-18 7.5a1 1 0 0 0 .1 1.9l7.2 2.1 2.1 7.2a1 1 0 0 0 1.9.1l7.5-18a1 1 0 0 0-.2-1.1Z"/>',
  'check': '<path fill="currentColor" d="m9.5 16.2-4.2-4.2-1.4 1.4 5.6 5.6L21.5 7l-1.4-1.4z"/>',
  'clock': '<path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4Z"/>',
  'instagram': '<path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM17.5 5.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>',
@@ -83,7 +84,7 @@ class Media:
             return self.placeholder(key, alt)
         base = 'assets/media/' + re.sub(r'\.[a-z0-9]+$', '', rel, flags=re.I)
         ext = src.suffix.lower()
-        widths = [480, 960, 1600]
+        widths = [480, 720, 960, 1600]
         variants = {}
         if Image and ext in ('.webp', '.jpg', '.jpeg', '.png'):
             im = Image.open(src)
@@ -189,11 +190,33 @@ class Media:
                 r = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(src)], capture_output=True, text=True)
                 try: dur = round(float(r.stdout.strip()))
                 except Exception: pass
-            res.append({'src': f'assets/media/{rel}', 'poster': poster, 'wide': w > h, 'title': m.get('title', ''), 'desc': m.get('description', ''), 'dur': dur})
+            thumb = poster
+            if poster and Image:
+                pj = self.out / poster
+                pw = pj.with_suffix('.webp')
+                try:
+                    if not pw.exists():
+                        im = Image.open(pj).convert('RGB'); im.thumbnail((640, 640), Image.LANCZOS); im.save(pw, 'WEBP', quality=72, method=6)
+                    poster = poster[:-4] + '.webp'
+                except Exception:
+                    pass
+            res.append({'src': f'assets/media/{rel}', 'poster': poster, 'thumb': thumb, 'wide': w > h, 'title': m.get('title', ''), 'desc': m.get('description', ''), 'dur': dur})
         return res
 
 
 # ------------------------------------------------------------------ randare
+def maps_link(l):
+    """Link spre fișa Google Maps a căminului (place_id), cu căutare ca rezervă."""
+    u = 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(l['mapsQuery'])
+    return u + '&query_place_id=' + l['placeId'] if l.get('placeId') else u
+
+
+def waze_link(l):
+    if l.get('lat'):
+        return f"https://www.waze.com/ul?ll={l['lat']}%2C{l['lng']}&navigate=yes"
+    return 'https://www.waze.com/ul?q=' + quote_plus(l['mapsQuery']) + '&navigate=yes'
+
+
 class Site:
     def __init__(self, env, out, site_url):
         self.env, self.out = env, out
@@ -220,7 +243,8 @@ class Site:
             a.append(f'srcset="{srcset}" sizes="{sizes}"')
         a.append(f'width="{m["w"]}" height="{m["h"]}" alt="{E(m["alt"])}"')
         a.append('fetchpriority="high"' if eager else 'loading="lazy"')
-        a.append('decoding="async"')
+        if not eager:
+            a.append('decoding="async"')
         if cls:
             a.append(f'class="{cls}"')
         return '<img ' + ' '.join(a) + '>'
@@ -260,10 +284,10 @@ class Site:
 <link rel="icon" href="{r}assets/media/site/logo/logo-caminul-adina-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="{r}apple-touch-icon.png">
 <link rel="manifest" href="{r}site.webmanifest">
-<link rel="preload" href="{r}assets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{r}assets/fonts/figtree-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{r}assets/fonts/fraunces-ro.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{r}assets/fonts/figtree-ro.woff2" as="font" type="font/woff2" crossorigin>
 {preload or ''}
-<link rel="stylesheet" href="{r}assets/css/site.css?v={self.css_v}">
+<style>{self.css_inline.replace("../fonts/", r + "assets/fonts/")}</style>
 <script type="application/ld+json">{json.dumps(ld if len(ld) > 1 else ld[0], ensure_ascii=False)}</script>
 </head>
 <body>
@@ -284,7 +308,7 @@ class Site:
         return f'''<header class="site-head">
 <div class="wrap head-row">
 <a class="brand" href="{r}" aria-label="Căminul Adina – pagina principală">
-<img src="{r}assets/media/site/logo/logo-caminul-adina-192.png" width="58" height="58" alt="">
+<img src="{r}assets/media/site/logo/logo-caminul-adina-116.webp" width="58" height="58" alt="">
 <span><b>Căminul Adina</b><small>Cămine pentru vârstnici</small></span>
 </a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Meniu</button>
@@ -385,9 +409,13 @@ class Site:
              'description': l['seoDescription'], 'url': self.abs(self.loc_url(l)), 'telephone': self.s['phoneE164'], 'email': self.s['email'],
              'image': [self.abs(m['src']) for m in imgs[:6]] or [self.og_default], 'parentOrganization': {'@id': self.abs('#organizatie')},
              'address': {'@type': 'PostalAddress', 'addressLocality': l['locality'], 'addressRegion': l['region'], 'addressCountry': 'RO'},
-             'hasMap': 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(l['mapsQuery'])}
+             'hasMap': maps_link(l)}
         if l['address'] != l['locality'] and l['status'] == 'open':
             d['address']['streetAddress'] = l['address']
+        if l.get('postal'):
+            d['address']['postalCode'] = l['postal']
+        if l.get('lat'):
+            d['geo'] = {'@type': 'GeoCoordinates', 'latitude': l['lat'], 'longitude': l['lng']}
         if l.get('priceFrom'):
             d['priceRange'] = f'de la {lei(l["priceFrom"])} / lună'
         return d
@@ -428,8 +456,8 @@ class Site:
 
     def incl_excl(self):
         return '''<div class="two-col">
-<div class="box"><h3>Inclus în preț</h3><ul><li>Cazare, menaj zilnic și spălătorie</li><li>Asistență medicală 24 din 24</li><li>Cinci mese pe zi, adaptate dietei</li><li>Consultații la cămin și kinetoterapie</li><li>Activități, frizerie, manichiură, pedichiură</li></ul></div>
-<div class="box"><h3>Se plătește separat</h3><ul><li>Scutece și produse de incontinență</li><li>Medicamente</li><li>Alte servicii cerute în plus, discutate dinainte</li></ul></div>
+<div class="box"><h2>Inclus în preț</h2><ul><li>Cazare, menaj zilnic și spălătorie</li><li>Asistență medicală 24 din 24</li><li>Cinci mese pe zi, adaptate dietei</li><li>Consultații la cămin și kinetoterapie</li><li>Activități, frizerie, manichiură, pedichiură</li></ul></div>
+<div class="box"><h2>Se plătește separat</h2><ul><li>Scutece și produse de incontinență</li><li>Medicamente</li><li>Alte servicii cerute în plus, discutate dinainte</li></ul></div>
 </div>'''
 
     def faq_html(self, items):
@@ -446,21 +474,21 @@ class Site:
 </div></div>'''
 
     def map_embed(self, l):
-        src = 'https://www.google.com/maps?q=' + quote_plus(l['mapsQuery']) + '&output=embed'
-        link = 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(l['mapsQuery'])
+        src = (f"https://www.google.com/maps?q={l['lat']},{l['lng']}&z=16&output=embed" if l.get('lat') else 'https://www.google.com/maps?q=' + quote_plus(l['mapsQuery']) + '&output=embed')
+        link = maps_link(l)
         return f'''<div class="map"><div class="ext" data-embed="{E(src)}" data-title="Hartă {E(l['fullName'])}">
 <span class="lbl">Hartă: {E(l['address'])}</span>
 <p>Harta e oferită de Google. Dacă o încărcați, Google poate seta cookie-uri.</p>
-<div class="btn-row"><button class="btn" type="button" data-load-once>Încarcă harta</button><a class="btn" href="{E(link)}" target="_blank" rel="noopener">{icon("pin")}Deschide în Google Maps</a></div>
+<div class="btn-row"><button class="btn" type="button" data-load-once>Încarcă harta</button><a class="btn" href="{E(link)}" target="_blank" rel="noopener">{icon("pin")}Google Maps</a><a class="btn" href="{E(waze_link(l))}" target="_blank" rel="noopener">{icon("nav")}Waze</a></div>
 </div></div>'''
 
-    def gallery_html(self, depth, gid, imgs, visible=12):
+    def gallery_html(self, depth, gid, imgs, visible=12, eager=0):
         if not imgs:
             return '<p class="muted">Fotografiile vor fi adăugate în curând.</p>'
         btns = ''
         for i, m in enumerate(imgs):
             hid = ' class="more-hidden"' if i >= visible else ''
-            btns += f'<button type="button" data-full="{self.R(depth)}{m["full"]}"{hid} aria-label="Mărește: {E(m["alt"])}">{self.img(depth, m, "(max-width:640px) 100vw, (max-width:1100px) 50vw, 400px")}</button>'
+            btns += f'<button type="button" data-full="{self.R(depth)}{m["full"]}"{hid} aria-label="Mărește: {E(m["alt"])}">{self.img(depth, m, "(max-width:640px) 100vw, (max-width:1100px) 50vw, 400px", eager=i < eager)}</button>'
         more = f'<button class="btn btn-line g-more" type="button" data-expand="{gid}">Vezi toate cele {len(imgs)} fotografii</button>' if len(imgs) > visible else ''
         return f'<div class="gallery" id="{gid}">{btns}</div>{more}'
 
@@ -468,7 +496,7 @@ class Site:
         out = ''
         for v in vids:
             r = self.R(depth)
-            poster = f' poster="{r}{v["poster"]}"' if v['poster'] else ''
+            poster = f' data-poster="{r}{v["poster"]}"' if v['poster'] else ''
             lbl = f' aria-label="{E(v["title"])}"' if v['title'] else ''
             cap = f'<figcaption><b>{E(v["title"])}</b>{E(v["desc"])}</figcaption>' if v['title'] else ''
             out += f'<figure class="vfig"><div class="vid{" wide" if v["wide"] else ""}"><video controls preload="none" playsinline{poster}{lbl}><source src="{r}{v["src"]}" type="video/mp4">Browserul nu poate reda videoclipul.</video></div>{cap}</figure>'
@@ -499,6 +527,10 @@ class Site:
     # ------------------------------------------------------------------ pagini
     def build(self):
         self.css_v = hashlib.md5((SRC / 'assets/css/site.css').read_bytes()).hexdigest()[:8]
+        css = (SRC / 'assets/css/site.css').read_text(encoding='utf-8')
+        css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+        css = re.sub(r'\s*\n\s*', '', css)
+        self.css_inline = re.sub(r'\s*([{};,>])\s*', r'\1', css).replace(';}', '}')
         self.js_v = hashlib.md5((SRC / 'assets/js/site.js').read_bytes()).hexdigest()[:8]
         shutil.copytree(SRC / 'assets', self.out / 'assets', dirs_exist_ok=True)
         self.logo()
@@ -532,6 +564,7 @@ class Site:
             bg = Image.new('RGBA', (180, 180), (255, 255, 255, 255)); bg.alpha_composite(im.resize((164, 164), Image.LANCZOS), (8, 8))
             bg.convert('RGB').save(self.out / 'apple-touch-icon.png')
             shutil.copyfile(self.out / 'favicon-32.png', self.out / 'favicon.ico')
+            im.resize((116, 116), Image.LANCZOS).save(d / 'logo-caminul-adina-116.webp', 'WEBP', quality=82, method=6)
 
     def home(self):
         s, d = self.s, 0
@@ -618,7 +651,7 @@ class Site:
         imgs = self.galleries[l['key']]
         cover = self.cover(l)
         others = [o for o in self.locs if o['key'] != l['key']]
-        link = 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(l['mapsQuery'])
+        link = maps_link(l)
         if l['status'] == 'soon':
             price = f'<div class="soon-box"><b>Deschidere: {E(l["openingLabel"])}</b><br>Rezervările au început. Prețul și disponibilitatea le aflați la {E(s["phone"])}.</div>'
             cta1 = 'Rezervă un loc'
@@ -666,7 +699,7 @@ class Site:
 
 <section aria-labelledby="t-m">
 <div class="wrap split">
-<div><h2 id="t-m">Cum ajungeți</h2><p class="lead" style="margin:18px 0">{E(l["address"])}, {E(l["locality"])}, {E(l["region"])}.</p><p>{E(l["nearby"])}</p><p><a class="btn btn-line" href="{E(link)}" target="_blank" rel="noopener">{icon("pin")}Deschide în Google Maps</a></p></div>
+<div><h2 id="t-m">Cum ajungeți</h2><p class="lead" style="margin:18px 0">{E(l["address"])}, {E(l["locality"])}, {E(l["region"])}.</p><p>{E(l["nearby"])}</p><div class="btn-row"><a class="btn btn-line" href="{E(link)}" target="_blank" rel="noopener">{icon("pin")}Deschide în Google Maps</a><a class="btn btn-line" href="{E(waze_link(l))}" target="_blank" rel="noopener">{icon("nav")}Navighează cu Waze</a></div></div>
 {self.map_embed(l)}
 </div>
 </section>
@@ -679,19 +712,20 @@ class Site:
         for v in self.vids[l['key']]:
             if v['title'] and v['poster']:
                 vo = {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': v['title'], 'description': v['desc'] or v['title'],
-                      'thumbnailUrl': self.abs(v['poster']), 'contentUrl': self.abs(v['src']), 'uploadDate': today, 'inLanguage': 'ro',
+                      'thumbnailUrl': self.abs(v.get('thumb') or v['poster']), 'contentUrl': self.abs(v['src']), 'uploadDate': today, 'inLanguage': 'ro',
                       'publisher': {'@id': self.abs('#organizatie')}}
                 if v['dur']: vo['duration'] = f'PT{v["dur"] // 60}M{v["dur"] % 60}S'
                 ld.append(vo)
         og = self.abs(cover['src']) if not cover['src'].endswith('.svg') else None
-        self.page(self.loc_url(l), l['seoTitle'], l['seoDescription'], body, jsonld=ld, og_img=og, nav='locatii')
+        pre = f'<link rel="preload" as="image" href="../{cover["src"]}" imagesrcset="{", ".join("../" + p.strip() for p in cover["srcset"].split(","))}" imagesizes="(max-width:960px) 92vw, 520px" fetchpriority="high">' if cover.get('srcset') else ''
+        self.page(self.loc_url(l), l['seoTitle'], l['seoDescription'], body, jsonld=ld, og_img=og, nav='locatii', preload=pre)
 
-    def simple(self, path, h1, lead, inner, title, desc, crumb, jsonld=None, cta=True):
+    def simple(self, path, h1, lead, inner, title, desc, crumb, jsonld=None, cta=True, preload=None):
         d = path.count('/')
         body = f'''{self.crumbs(d, [("Acasă", ""), (crumb, path)])}
 <div class="page-head" style="margin-top:12px"><div class="wrap"><h1>{E(h1)}</h1><p class="lead">{lead}</p></div></div>
 {inner}'''
-        self.page(path, title, desc, body, jsonld=(jsonld or []) + [self.ld_crumbs([('Acasă', ''), (crumb, path)])], nav=path, cta=cta)
+        self.page(path, title, desc, body, jsonld=(jsonld or []) + [self.ld_crumbs([('Acasă', ''), (crumb, path)])], nav=path, cta=cta, preload=preload)
 
     def services(self):
         d = 1
@@ -747,17 +781,20 @@ class Site:
                     f'Căminul Adina îngrijește vârstnici de peste {s["experienceYears"]} ani, în Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov. Aflați cine suntem și ce ne propunem.', 'Despre noi')
 
     def galleryp(self):
-        secs = ''
+        secs = ''; first = True
+        g0 = next((self.galleries[l['key']][0] for l in self.locs if self.galleries[l['key']]), None)
+        pre = f'<link rel="preload" as="image" href="../{g0["src"]}" imagesrcset="{", ".join("../" + p.strip() for p in g0["srcset"].split(","))}" imagesizes="(max-width:640px) 100vw, (max-width:1100px) 50vw, 400px" fetchpriority="high">' if g0 and g0.get('srcset') else ''
         for l in self.locs:
             imgs = self.galleries[l['key']]
             if not imgs:
                 continue
             secs += f'''<section aria-labelledby="g-{l["key"]}" style="--c:{l["color"]};padding:56px 0 0">
 <div class="wrap"><div class="sec-head"><h2 id="g-{l["key"]}">{E(l["fullName"])}</h2><p class="lead"><a href="../{self.loc_url(l)}">Pagina locației {E(l["name"])}</a></p></div>
-{self.gallery_html(1, "gp-" + l["key"], imgs, visible=9)}</div></section>'''
+{self.gallery_html(1, "gp-" + l["key"], imgs, visible=9, eager=1 if first else 0)}</div></section>'''
+            first = False
         self.simple('galerie/', 'Galerie foto și video', 'Fotografii din toate locațiile Căminul Adina: camere, spații comune, curți și grădini.', secs + '<div style="height:88px"></div>',
                     'Galerie foto – Căminul Adina Pipera, Otopeni, Snagov, Ploiești, Poiana Brașov',
-                    'Fotografii din căminele Adina: camere, livinguri, curți și grădini în Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov.', 'Galerie')
+                    'Fotografii din căminele Adina: camere, livinguri, curți și grădini în Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov.', 'Galerie', preload=pre)
 
     def faqp(self):
         ld = [{'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': f['q'], 'acceptedAnswer': {'@type': 'Answer', 'text': f['a']}} for f in self.faq]}]
@@ -769,7 +806,7 @@ class Site:
     def contact(self):
         s = self.s
         opts = ''.join(f'<option value="{E(l["name"])}">{E(l["name"])}{" (deschidere " + E(l["openingLabel"]) + ")" if l["status"] == "soon" else ""}</option>' for l in self.locs)
-        addrs = ''.join(f'<li><a href="https://www.google.com/maps/search/?api=1&query={quote_plus(l["mapsQuery"])}" target="_blank" rel="noopener" style="--c:{l["color"]}">{icon("pin")}<span>{E(l["fullName"])}<small>{E(l["address"])}{", " + E(l["locality"]) if l["locality"] not in l["address"] else ""}</small></span></a></li>' for l in self.locs)
+        addrs = ''.join(f'<li><a href="{E(maps_link(l))}" target="_blank" rel="noopener" style="--c:{l["color"]}">{icon("pin")}<span>{E(l["fullName"])}<small>{E(l["address"])}{", " + E(l["locality"]) if l["locality"] not in l["address"] else ""}</small></span></a></li>' for l in self.locs)
         inner = f'''<section><div class="wrap contact-grid">
 <div>
 <h2>Vorbiți cu noi</h2>

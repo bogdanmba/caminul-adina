@@ -44,6 +44,14 @@
     });
   }
 
+  /* ---------- postere video, încărcate când se apropie de ecran ---------- */
+  var vids = $$('video[data-poster]');
+  function setPoster(v) { v.poster = v.getAttribute('data-poster'); v.removeAttribute('data-poster'); }
+  if ('IntersectionObserver' in window) {
+    var vio = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { setPoster(e.target); vio.unobserve(e.target); } }); }, { rootMargin: '400px 0px' });
+    vids.forEach(function (v) { vio.observe(v); });
+  } else vids.forEach(setPoster);
+
   /* ---------- galerie + lightbox ---------- */
   var lb, lbImg, lbCnt, list = [], idx = 0, lastFocus;
   function buildLb() {

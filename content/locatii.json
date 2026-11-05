@@ -8,8 +8,8 @@
     "locality": "Voluntari",
     "region": "Ilfov",
     "address": "Bulevardul Pipera nr. 55A",
-    "mapsQuery": "Bulevardul Pipera 55A, Voluntari, Ilfov",
-    "postal": "",
+    "mapsQuery": "Căminul de Bătrâni ADINA, Bulevardul Pipera nr. 55A, Voluntari",
+    "postal": "014254",
     "priceFrom": 6500,
     "status": "open",
     "color": "#1F6152",
@@ -50,7 +50,11 @@
     ],
     "reels": [],
     "nearby": "Acces ușor din nordul Bucureștiului.",
-    "cover": "site/pipera/pipera-12.webp"
+    "cover": "site/pipera/pipera-12.webp",
+    "mapsName": "Căminul de Bătrâni ADINA",
+    "placeId": "ChIJD1KBQ435sUARuxdqqFH6Z9A",
+    "lat": 44.504084,
+    "lng": 26.1359325
   },
   {
     "slug": "camin-batrani-otopeni",
@@ -61,8 +65,8 @@
     "locality": "Otopeni",
     "region": "Ilfov",
     "address": "Strada Ion Luca Caragiale nr. 7",
-    "mapsQuery": "Strada Ion Luca Caragiale 7, Otopeni, Ilfov",
-    "postal": "",
+    "mapsQuery": "Caminul Adina Otopeni, Strada Ion Luca Caragiale nr. 7, Otopeni",
+    "postal": "075100",
     "priceFrom": 6500,
     "status": "open",
     "color": "#A6402F",
@@ -103,7 +107,11 @@
     ],
     "reels": [],
     "nearby": "Lângă Aeroportul Henri Coandă, la câteva minute de București.",
-    "cover": "site/otopeni/otopeni-09.webp"
+    "cover": "site/otopeni/otopeni-09.webp",
+    "mapsName": "Caminul Adina Otopeni",
+    "placeId": "ChIJcaIS4eUdskARPuMV0ISnW4g",
+    "lat": 44.5491959,
+    "lng": 26.0820362
   },
   {
     "slug": "camin-batrani-snagov",
@@ -114,8 +122,8 @@
     "locality": "Ciofliceni, Snagov",
     "region": "Ilfov",
     "address": "Strada Ștefan cel Mare nr. 74",
-    "mapsQuery": "Strada Ștefan cel Mare 74, Ciofliceni, Snagov, Ilfov",
-    "postal": "",
+    "mapsQuery": "Caminul Adina Snagov, Strada Ștefan cel Mare nr. 74, Ciofliceni, Snagov",
+    "postal": "077166",
     "priceFrom": 7000,
     "status": "open",
     "color": "#2A6687",
@@ -156,7 +164,11 @@
     ],
     "reels": [],
     "nearby": "La aproximativ 40 de km nord de București, lângă Lacul Snagov.",
-    "cover": "facebook/snagov/fb-snagov-02.webp"
+    "cover": "facebook/snagov/fb-snagov-02.webp",
+    "mapsName": "Caminul Adina Snagov",
+    "placeId": "ChIJN2QO4r8ZskAR3OilR3-kUPg",
+    "lat": 44.6796243,
+    "lng": 26.1087366
   },
   {
     "slug": "camin-batrani-ploiesti",
@@ -167,8 +179,8 @@
     "locality": "Ploiești",
     "region": "Prahova",
     "address": "Strada Crăițelor nr. 6",
-    "mapsQuery": "Strada Crăițelor 6, Ploiești, Prahova",
-    "postal": "",
+    "mapsQuery": "Caminul Adina Ploiesti, Strada Crăițelor nr. 6, Ploiești",
+    "postal": "100193",
     "priceFrom": 5500,
     "status": "open",
     "color": "#865719",
@@ -209,7 +221,11 @@
     ],
     "reels": [],
     "nearby": "Lângă AFI Mall Ploiești.",
-    "cover": "site/ploiesti/ploiesti-02.webp"
+    "cover": "site/ploiesti/ploiesti-02.webp",
+    "mapsName": "Caminul Adina Ploiesti",
+    "placeId": "ChIJsdIZV7pLskARGA0WmZtMHK8",
+    "lat": 44.9519603,
+    "lng": 26.0414083
   },
   {
     "slug": "camin-batrani-poiana-brasov",
