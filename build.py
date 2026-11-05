@@ -161,7 +161,11 @@ class Media:
                     src = cached
             shutil.copyfile(src, dst)
             poster = ''
-            if shutil.which('ffmpeg'):
+            ready = p.with_suffix('.jpg')  # poster pregătit în media/ (merge și fără ffmpeg, de ex. pe GitHub)
+            if ready.exists():
+                shutil.copyfile(ready, dst.with_suffix('.jpg'))
+                poster = f'assets/media/{rel[:-4]}.jpg'
+            elif shutil.which('ffmpeg'):
                 pp = dst.with_suffix('.jpg')
                 if not pp.exists():
                     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '1', '-i', str(src), '-frames:v', '1', '-vf', "scale='min(720,iw)':-2", '-q:v', '4', str(pp)], check=False)
