@@ -126,7 +126,7 @@ class Media:
     def gallery(self, key):
         """Toate pozele unei locații: întâi cele de pe Facebook (mai noi), apoi cele de pe site-ul vechi."""
         rels = []
-        for folder in (f'facebook/{key}', f'site/{key}'):
+        for folder in (f'client/{key}', f'facebook/{key}', f'site/{key}'):
             d = MEDIA / folder
             if d.exists():
                 rels += sorted(f'{folder}/{p.name}' for p in d.iterdir() if p.suffix.lower() in ('.webp', '.jpg', '.jpeg', '.png'))
@@ -138,12 +138,15 @@ class Media:
         return out
 
     def videos(self, key):
-        d = MEDIA / f'site/{key}/video'
-        if not d.exists():
-            return []
+        meta = load('media-video.json') if (CONTENT / 'media-video.json').exists() else {}
+        files = []
+        for folder in (f'client/{key}/video', f'site/{key}/video'):
+            d = MEDIA / folder
+            if d.exists():
+                files += [(f'{folder}/{p.name}', p) for p in sorted(d.glob('*.mp4'))]
+        files.sort(key=lambda x: (list(meta).index(x[0]) if x[0] in meta else 999))
         res = []
-        for p in sorted(d.glob('*.mp4')):
-            rel = f'site/{key}/video/{p.name}'
+        for rel, p in files:
             if rel in self.excl:
                 continue
             dst = self.out / 'assets/media' / rel
@@ -180,7 +183,13 @@ class Media:
                         w, h = h, w
                 except Exception:
                     pass
-            res.append({'src': f'assets/media/{rel}', 'poster': poster, 'wide': w > h})
+            m = meta.get(rel, {})
+            dur = None
+            if shutil.which('ffprobe'):
+                r = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(src)], capture_output=True, text=True)
+                try: dur = round(float(r.stdout.strip()))
+                except Exception: pass
+            res.append({'src': f'assets/media/{rel}', 'poster': poster, 'wide': w > h, 'title': m.get('title', ''), 'desc': m.get('description', ''), 'dur': dur})
         return res
 
 
@@ -454,7 +463,9 @@ class Site:
         for v in vids:
             r = self.R(depth)
             poster = f' poster="{r}{v["poster"]}"' if v['poster'] else ''
-            out += f'<div class="vid{" wide" if v["wide"] else ""}"><video controls preload="none" playsinline{poster}><source src="{r}{v["src"]}" type="video/mp4">Browserul nu poate reda videoclipul.</video></div>'
+            lbl = f' aria-label="{E(v["title"])}"' if v['title'] else ''
+            cap = f'<figcaption><b>{E(v["title"])}</b>{E(v["desc"])}</figcaption>' if v['title'] else ''
+            out += f'<figure class="vfig"><div class="vid{" wide" if v["wide"] else ""}"><video controls preload="none" playsinline{poster}{lbl}><source src="{r}{v["src"]}" type="video/mp4">Browserul nu poate reda videoclipul.</video></div>{cap}</figure>'
         g = self.galleries.get(l['key']) or []
         for i, u in enumerate(reels, 1):
             out += self.reel(u, f'{l["fullName"]} – video {i}', l['color'], depth, g[(i * 3) % len(g)] if g else None)
@@ -657,6 +668,14 @@ class Site:
 <div class="wrap"><div class="sec-head"><h2 id="t-o">Celelalte locații Căminul Adina</h2></div><div class="loc-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">{self.loc_cards(d, others)}</div></div>
 </section>'''
         ld = [self.ld_loc(l, imgs), self.ld_crumbs([('Acasă', ''), (f'Cămin de bătrâni {name}', self.loc_url(l))])]
+        today = dt.date.today().isoformat()
+        for v in self.vids[l['key']]:
+            if v['title'] and v['poster']:
+                vo = {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': v['title'], 'description': v['desc'] or v['title'],
+                      'thumbnailUrl': self.abs(v['poster']), 'contentUrl': self.abs(v['src']), 'uploadDate': today, 'inLanguage': 'ro',
+                      'publisher': {'@id': self.abs('#organizatie')}}
+                if v['dur']: vo['duration'] = f'PT{v["dur"] // 60}M{v["dur"] % 60}S'
+                ld.append(vo)
         og = self.abs(cover['src']) if not cover['src'].endswith('.svg') else None
         self.page(self.loc_url(l), l['seoTitle'], l['seoDescription'], body, jsonld=ld, og_img=og, nav='locatii')
 

@@ -1,0 +1,82 @@
+{
+  "client/snagov/video/camin-batrani-snagov-tur-camere-gradina-lac.mp4": {
+    "title": "Turul Căminului Adina Snagov",
+    "description": "Prezentarea căminului din Snagov: grădina de 6.000 mp, ieșirea la lac, camerele, bucătăria și terasele.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-prezentare-lac-piscina.mp4": {
+    "title": "Căminul Adina Snagov, pe malul lacului",
+    "description": "Cum arată locul: lacul, curtea, livingul și grija de zi cu zi a rezidenților.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-prezentare-gradina-6000-mp.mp4": {
+    "title": "Grădina de 6.000 mp de la Snagov",
+    "description": "Camerele cu baie proprie, curtea mare și timpul petrecut afară la Căminul Adina Snagov.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-activitati-gradinarit-pescuit.mp4": {
+    "title": "Activități la Snagov: grădinărit, pescuit, plimbări",
+    "description": "Rezidenții fac mișcare, grădinăresc, pescuiesc și se plimbă cu barca pe lac.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-kinetoterapie-in-aer-liber.mp4": {
+    "title": "Kinetoterapie în aer liber la Snagov",
+    "description": "Ședințe de kinetoterapie și jocuri în curtea căminului din Snagov.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-masa-bucatarie-proprie.mp4": {
+    "title": "Masa la Căminul Adina: bucătărie proprie",
+    "description": "Mâncare gătită zilnic în bucătăria proprie, servită rezidenților.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-lacul-snagov-barca.mp4": {
+    "title": "Plimbare cu barca pe Lacul Snagov",
+    "description": "Lacul Snagov, la câțiva pași de cămin, filmat din dronă.",
+    "muted": false
+  },
+  "client/snagov/video/camin-batrani-snagov-vedere-drona-lac.mp4": {
+    "title": "Căminul din Snagov văzut din dronă",
+    "description": "Clădirea, piscina și malul lacului, filmate de sus.",
+    "muted": false
+  },
+  "client/ploiesti/video/camin-batrani-ploiesti-prezentare-camere.mp4": {
+    "title": "Căminul Adina Ploiești: prezentare",
+    "description": "Clădirea din Ploiești, camerele single și duble și activitățile rezidenților.",
+    "muted": false
+  },
+  "client/ploiesti/video/camin-batrani-ploiesti-ce-mananca-seniorii.mp4": {
+    "title": "Ce mănâncă seniorii la Căminul Adina",
+    "description": "Cele trei mese principale și gustările, gătite și servite zilnic.",
+    "muted": false
+  },
+  "client/ploiesti/video/camin-batrani-ploiesti-interviu-rezident.mp4": {
+    "title": "Un rezident despre Căminul Adina Ploiești",
+    "description": "Un rezident povestește cum a ales căminul și cum își petrece ziua.",
+    "muted": false
+  },
+  "client/ploiesti/video/camin-batrani-ploiesti-intrebari-familii.mp4": {
+    "title": "Răspunsuri la întrebările familiilor",
+    "description": "Vizite, personal, cât poate sta un rezident: răspunsuri la întrebările frecvente ale familiilor.",
+    "muted": false
+  },
+  "client/otopeni/video/camin-batrani-otopeni-sarbatoare-in-curte.mp4": {
+    "title": "Sărbătoare în curtea căminului din Otopeni",
+    "description": "Rezidenții și echipa sărbătoresc împreună în curtea Căminului Adina din Otopeni.",
+    "muted": false
+  },
+  "client/poiana-brasov/video/camin-batrani-poiana-brasov-tur-camere.mp4": {
+    "title": "Turul camerelor din Poiana Brașov",
+    "description": "Holurile, camerele duble și băile căminului din Poiana Brașov.",
+    "muted": true
+  },
+  "client/poiana-brasov/video/camin-batrani-poiana-brasov-camere-si-terase.mp4": {
+    "title": "Camere și terase cu vedere la munte",
+    "description": "Camerele luminoase și terasele cu vedere spre brazi, la Căminul Adina Poiana Brașov.",
+    "muted": true
+  },
+  "client/poiana-brasov/video/camin-batrani-poiana-brasov-camera-dubla.mp4": {
+    "title": "O cameră dublă din Poiana Brașov",
+    "description": "Camera dublă cu baie proprie, pregătită pentru rezidenți.",
+    "muted": true
+  }
+}

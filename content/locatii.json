@@ -101,9 +101,7 @@
       "Cabinet medical propriu",
       "Aproape de aeroport"
     ],
-    "reels": [
-      "https://www.facebook.com/reel/735589744713630/"
-    ],
+    "reels": [],
     "nearby": "Lângă Aeroportul Henri Coandă, la câteva minute de București.",
     "cover": "site/otopeni/otopeni-09.webp"
   },
@@ -156,13 +154,7 @@
       "6.000 mp de grădină",
       "Locație nouă"
     ],
-    "reels": [
-      "https://www.facebook.com/reel/1760995055016956/",
-      "https://www.facebook.com/reel/1808815030527107/",
-      "https://www.facebook.com/reel/1035040272406920/",
-      "https://www.facebook.com/reel/1353052226956555/",
-      "https://www.facebook.com/reel/1889219215075449/"
-    ],
+    "reels": [],
     "nearby": "La aproximativ 40 de km nord de București, lângă Lacul Snagov.",
     "cover": "facebook/snagov/fb-snagov-02.webp"
   },
@@ -215,10 +207,7 @@
       "Clădire nouă",
       "Cel mai accesibil preț"
     ],
-    "reels": [
-      "https://www.facebook.com/reel/2852564721797318/",
-      "https://www.facebook.com/reel/1405089084755839/"
-    ],
+    "reels": [],
     "nearby": "Lângă AFI Mall Ploiești.",
     "cover": "site/ploiesti/ploiesti-02.webp"
   },
@@ -275,6 +264,6 @@
     ],
     "reels": [],
     "nearby": "În stațiunea Poiana Brașov. Adresa exactă o primiți la telefon.",
-    "cover": "facebook/poiana-brasov/fb-poiana-brasov-02.webp"
+    "cover": "client/poiana-brasov/camin-batrani-poiana-brasov-cladire-vedere-aeriana.webp"
   }
 ]

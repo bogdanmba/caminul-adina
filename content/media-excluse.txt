@@ -48,3 +48,6 @@ facebook/snagov/fb-snagov-06.webp
 site/ploiesti/ploiesti-01.webp
 # Poiana Brașov: unghi înclinat
 facebook/poiana-brasov/fb-poiana-brasov-01.webp
+site/snagov/video/video-snagov-2026-05-12-at-08.03.34.mp4
+site/snagov/video/video-snagov-2026-05-12-at-08.03.34-1.mp4
+site/snagov/video/video-snagov-2026-05-12-at-08.03.34-2.mp4
