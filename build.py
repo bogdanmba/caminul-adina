@@ -132,10 +132,30 @@ class Media:
             if d.exists():
                 rels += sorted(f'{folder}/{p.name}' for p in d.iterdir() if p.suffix.lower() in ('.webp', '.jpg', '.jpeg', '.png'))
         rels = [r for r in rels if r not in self.excl]
+        # ordine logică (exterior, grădină, living, masă, dormitoare, baie) din content/media-ordine.json; pozele noi, nelistate, la final
+        order = (load('media-ordine.json') if (CONTENT / 'media-ordine.json').exists() else {}).get(key, [])
+        pos = {r: i for i, r in enumerate(order)}
+        rels.sort(key=lambda r: pos.get(r, len(order)))
         name = self.locs[key]['name']
         out = []
         for i, r in enumerate(rels, 1):
             out.append(self.image(r, self.alts.get(r) or f'Căminul Adina {name} – fotografie {i}', key))
+        return out
+
+    def area(self, key):
+        """Fotografii cu împrejurimile locației (media/zona/{key}), cu sursa și licența din content/media-credit.json."""
+        d = MEDIA / f'zona/{key}'
+        if not d.exists():
+            return []
+        credits = load('media-credit.json') if (CONTENT / 'media-credit.json').exists() else {}
+        out = []
+        for p in sorted(d.iterdir()):
+            r = f'zona/{key}/{p.name}'
+            if p.suffix.lower() not in ('.webp', '.jpg', '.jpeg', '.png') or r in self.excl:
+                continue
+            m = self.image(r, self.alts.get(r) or f'Împrejurimi {self.locs[key]["name"]}', key)
+            m['credit'] = credits.get(r)
+            out.append(m)
         return out
 
     def videos(self, key):
@@ -492,6 +512,26 @@ class Site:
         more = f'<button class="btn btn-line g-more" type="button" data-expand="{gid}">Vezi toate cele {len(imgs)} fotografii</button>' if len(imgs) > visible else ''
         return f'<div class="gallery" id="{gid}">{btns}</div>{more}'
 
+    def area_html(self, depth, l):
+        imgs = self.media.area(l['key'])
+        if not imgs:
+            return ''
+        cr = [m['credit'] for m in imgs if m.get('credit') and not m['credit']['license'].upper().startswith(('CC0', 'PUBLIC'))]
+        seen, items = set(), []
+        for c in cr:
+            k = (c['artist'], c['license'])
+            if k in seen:
+                continue
+            seen.add(k)
+            items.append(f'<a href="{E(c["page"])}" target="_blank" rel="noopener">{E(c["artist"])}</a> (<a href="{E(c["licenseUrl"])}" target="_blank" rel="noopener">{E(c["license"])}</a>)')
+        credits = f'<p class="credits">Fotografii de pe Wikimedia Commons: {", ".join(items)}.</p>' if items else ''
+        return f'''<section aria-labelledby="t-z" style="padding-top:0">
+<div class="wrap"><div class="sec-head"><h2 id="t-z">În jurul căminului: {E(l["name"])}</h2><p class="lead">Pădure de brad, pajiști, Lacul Miorița și aer de munte, în fiecare anotimp.</p></div>
+{self.gallery_html(depth, "z-" + l["key"], imgs, visible=8)}
+{credits}
+</div>
+</section>'''
+
     def videos_html(self, depth, vids, reels, l):
         out = ''
         for v in vids:
@@ -692,6 +732,7 @@ class Site:
 {self.gallery_html(d, "g-" + l["key"], imgs)}
 </div>
 </section>
+{self.area_html(d, l)}
 {vid_sec}
 <section class="sec-ink" aria-labelledby="t-i">
 <div class="wrap"><div class="sec-head"><h2 id="t-i">Inclus în prețul lunar</h2><p class="lead">La fel la toate locațiile Căminul Adina. Separat se plătesc doar scutecele și medicamentele.</p></div>{self.included()}</div>
