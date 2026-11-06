@@ -91,11 +91,19 @@
  ],
  "poiana-brasov": [
   "client/poiana-brasov/camin-batrani-poiana-brasov-cladire-vedere-aeriana.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-cladire-vedere-de-sus-munti.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-cladire-fatada-vara.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-cladire-arcada-tuia.webp",
   "facebook/poiana-brasov/fb-poiana-brasov-02.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-alee-banca.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-gazon-tuia.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-pajiste.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-gazon-foisor.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-iarna-brazi.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-flori-brazi.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-iaz.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-terasa-masa-gradina.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-terasa-sezlonguri.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-terasa-vedere-munte.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-balcon-vedere-padure.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-vedere-padure-iarna.webp",
@@ -103,6 +111,8 @@
   "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-alei.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-gradina-brazi.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-living-canapele.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-hol-luminos-canapele.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-atrium-cu-plante.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-sauna.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-sala-de-jocuri-biliard.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-sala-de-jocuri-tenis-de-masa.webp",
@@ -113,10 +123,12 @@
   "client/poiana-brasov/camin-batrani-poiana-brasov-mic-dejun.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-sala-de-mese-lemn.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-sala-de-mese.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-sala-de-mese-veranda.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-camera-dubla-verde.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-camera-dubla-rosie.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-camera-dubla-fotolii.webp",
   "client/poiana-brasov/camin-batrani-poiana-brasov-camera-dubla.webp",
-  "client/poiana-brasov/camin-batrani-poiana-brasov-baie-proprie.webp"
+  "client/poiana-brasov/camin-batrani-poiana-brasov-baie-proprie.webp",
+  "client/poiana-brasov/camin-batrani-poiana-brasov-baie-cu-dus.webp"
  ]
 }
