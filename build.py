@@ -379,7 +379,7 @@ class Site:
 <div class="foot-grid">
 <div>
 <h3>Căminul Adina</h3>
-<p>Cămine pentru vârstnici în Pipera, Otopeni, Snagov, Ploiești și, din ianuarie 2027, Poiana Brașov. Îngrijire medicală non-stop, cu respect și răbdare.</p>
+<p>Cămine pentru vârstnici în Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov. Îngrijire medicală non-stop, cu respect și răbdare.</p>
 <div class="social">{social}</div>
 </div>
 <div><h3>Locații</h3><ul>{locs}</ul></div>
@@ -560,7 +560,7 @@ class Site:
         out = ''
         for l in locs:
             m = self.cover(l)
-            price = f'<span class="price">de la <b>{lei(l["priceFrom"])}</b>/lună</span>' if l['priceFrom'] else '<span class="price">Rezervări deschise</span>'
+            price = f'<span class="price">de la <b>{lei(l["priceFrom"])}</b>/lună</span>' if l['priceFrom'] else '<span class="price">Preț la telefon</span>'
             pill = f'<span class="pill">Din {E(l["openingLabel"])}</span>' if l['status'] == 'soon' else ''
             out += f'''<a class="loc-card" href="{r}{self.loc_url(l)}" style="--c:{l["color"]}">{pill}
 <div class="ph">{self.img(depth, m, "(max-width:640px) 50vw, (max-width:1100px) 33vw, 240px")}</div>
@@ -630,7 +630,7 @@ class Site:
 <div>
 {news}
 <h1>Cămine de bătrâni în care părinții se simt acasă</h1>
-<p class="lead">Cinci locații – Pipera, Otopeni, Snagov, Ploiești și, din ianuarie 2027, Poiana Brașov – cu asistență medicală non-stop, mese gătite în fiecare zi și curți mari în care se poate ieși la soare.</p>
+<p class="lead">Cinci locații – Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov – cu asistență medicală non-stop, mese gătite în fiecare zi și curți mari în care se poate ieși la soare.</p>
 <div class="btn-row" data-hero-cta><a class="btn btn-ink" href="contact/#programare">Programează o vizită</a><a class="btn btn-line" href="tel:{s["phoneE164"]}">{icon("phone")}Sună: {E(s["phone"])}</a></div>
 <ul class="trust"><li>{icon("check")}Asistente și infirmiere 24 din 24</li><li>{icon("check")}Medici specialiști la cămin</li><li>{icon("check")}Prețuri de la 5.500 lei/lună</li><li>{icon("check")}Peste {s["experienceYears"]} ani de experiență</li></ul>
 </div>
@@ -706,7 +706,8 @@ class Site:
             price = f'<div class="soon-box"><b>Deschidere: {E(l["openingLabel"])}</b><br>Rezervările au început. Prețul și disponibilitatea le aflați la {E(s["phone"])}.</div>'
             cta1 = 'Rezervă un loc'
         else:
-            price = f'<p class="price-line">de la <b>{lei(l["priceFrom"])}</b> pe lună, cu serviciile incluse</p>'
+            price = (f'<p class="price-line">de la <b>{lei(l["priceFrom"])}</b> pe lună, cu serviciile incluse</p>' if l.get('priceFrom')
+                     else f'<p class="price-line">Prețul și locurile disponibile le aflați la <a href="tel:{s["phoneE164"]}"><b>{E(s["phone"])}</b></a></p>')
             cta1 = 'Programează o vizită'
         facts = ''.join(f'<dt>{E(k)}</dt><dd>{E(v)}</dd>' for k, v in l['facts'])
         hl = ''.join(f'<li>{E(h)}</li>' for h in l['highlights'])
@@ -817,7 +818,7 @@ class Site:
         inner = f'''<section><div class="wrap split top">
 <div class="prose">
 <h2 style="margin-top:0">Cine suntem</h2>
-<p>Căminul Adina îngrijește vârstnici de peste {s["experienceYears"]} ani. Am început cu o singură casă și am crescut, an după an, până la cinci locații: Pipera, Otopeni, Snagov, Ploiești și, din ianuarie 2027, Poiana Brașov.</p>
+<p>Căminul Adina îngrijește vârstnici de peste {s["experienceYears"]} ani. Am început cu o singură casă și am crescut, an după an, până la cinci locații: Pipera, Otopeni, Snagov, Ploiești și Poiana Brașov.</p>
 <p>Coordonatoarea căminelor, {E(s["manager"])}, are o experiență îndelungată în deschiderea și conducerea centrelor pentru vârstnici. Știe din practică ce înseamnă o zi bună pentru un vârstnic și ce o strică.</p>
 <h2>Ce ne propunem</h2>
 <p>Vrem ca fiecare rezident să trăiască o viață liniștită și demnă, iar familia să știe că părintele ei e în siguranță. De aceea punem pe primul loc lucrurile simple: îngrijire medicală permanentă, mâncare bună, curățenie și oameni care au timp să asculte.</p>

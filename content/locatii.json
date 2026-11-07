@@ -239,22 +239,16 @@
     "mapsQuery": "Poiana Brașov, Brașov",
     "postal": "",
     "priceFrom": null,
-    "status": "soon",
-    "openingDate": "2027-01-15",
-    "openingLabel": "15 ianuarie 2027",
+    "status": "open",
     "color": "#5A4775",
-    "seoTitle": "Cămin de bătrâni Poiana Brașov – Căminul Adina, deschidere 15 ianuarie 2027",
-    "seoDescription": "Căminul Adina se deschide în Poiana Brașov pe 15 ianuarie 2027: 36 de camere și 5 apartamente cu baie proprie, lift, saună, kinetoterapie, grădină de 6.000 mp. Rezervări: 0756 604 755.",
-    "tagline": "Un hotel adaptat pentru îngrijire, la munte. Rezervările au început.",
+    "seoTitle": "Cămin de bătrâni Poiana Brașov – Căminul Adina, la munte",
+    "seoDescription": "Căminul Adina Poiana Brașov s-a deschis: 36 de camere și 5 apartamente cu baie proprie, lift, saună, kinetoterapie și grădină de 6.000 mp, la munte. Programați o vizită: 0756 604 755.",
+    "tagline": "Un cămin nou la munte, cu grădină mare și aer curat. Acum deschis.",
     "intro": [
-      "Căminul Adina se extinde în Poiana Brașov, într-un hotel adaptat pentru îngrijire și confort. Deschiderea oficială e pe 15 ianuarie 2027, iar rezervările au început.",
+      "Căminul Adina din Poiana Brașov s-a deschis, într-o clădire adaptată pentru îngrijire și confort, în mijlocul pădurii de brad.",
       "Clădirea are 36 de camere și 5 apartamente, single și duble, fiecare cu baie proprie, și lift pentru acces ușor. Grădina de 6.000 mp are alei de plimbare și un foișor mare, în mijlocul naturii și al aerului curat de munte."
     ],
     "facts": [
-      [
-        "Deschidere",
-        "15 ianuarie 2027"
-      ],
       [
         "Camere",
         "36 de camere și 5 apartamente, single și duble"
@@ -273,10 +267,10 @@
       ]
     ],
     "highlights": [
-      "Deschidere 15 ianuarie 2027",
+      "Locație nouă, la munte",
       "Bucătar și bucătărie proprie",
       "Kinetoterapie și saună",
-      "Aer de munte"
+      "Grădină de 6.000 mp"
     ],
     "reels": [],
     "nearby": "În stațiunea Poiana Brașov. Adresa exactă o primiți la telefon.",
