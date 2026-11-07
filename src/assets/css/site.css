@@ -350,3 +350,5 @@ form.cf{background:#fff;border:1px solid var(--line);border-radius:24px;padding:
 .social-btns .btn{min-height:48px}
 .credits{margin-top:14px;font-size:14px;line-height:1.5;color:var(--muted)}
 .credits a{color:inherit}
+.lb{touch-action:pinch-zoom;overscroll-behavior:contain}
+.lb img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}

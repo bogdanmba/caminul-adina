@@ -62,6 +62,15 @@
     lbImg = $('img', lb); lbCnt = $('.cnt', lb);
     $('.x', lb).onclick = closeLb; $('.pv', lb).onclick = function () { show(idx - 1); }; $('.nx', lb).onclick = function () { show(idx + 1); };
     lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+    /* swipe pe telefon: stânga/dreapta = poza următoare/anterioară, în jos = închide */
+    var sx = 0, sy = 0, st = 0;
+    lb.addEventListener('touchstart', function (e) { if (e.touches.length !== 1) { st = 0; return; } sx = e.touches[0].clientX; sy = e.touches[0].clientY; st = Date.now(); }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (!st || e.changedTouches.length !== 1) return;
+      var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; st = 0;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.2) show(idx + (dx < 0 ? 1 : -1));
+      else if (dy > 90 && Math.abs(dy) > Math.abs(dx) * 1.5) closeLb();
+    }, { passive: true });
     document.addEventListener('keydown', function (e) {
       if (!lb.classList.contains('open')) return;
       if (e.key === 'Escape') closeLb();
